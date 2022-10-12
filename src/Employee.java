@@ -16,9 +16,9 @@ public class Employee {
         this.salary = salary;
         this.workHours = workHours;
         this.hireYear = hireYear;
+        tax();
         bonus();
         raiseSalary();
-        tax();
     }
 
     public String getName() {
