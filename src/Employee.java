@@ -83,7 +83,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Name: " + getName() + " Salary: " + getSalary()+ "(Bonus: "+this.bonusAmount+"," + " Work Hours: " + getWorkHours() + " Hire Year: " + getHireYear()+"\n"
-                ;
+        return "Name: " + getName() + " Salary: " + getSalary()+ "(Bonus: "+this.bonusAmount+",Raise: " +this.raiseAmount + " Work Hours: " + getWorkHours() + " Hire Year: " + getHireYear();
     }
 }
