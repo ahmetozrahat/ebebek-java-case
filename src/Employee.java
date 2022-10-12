@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Employee {
 
     private String name;
@@ -14,9 +16,9 @@ public class Employee {
         this.salary = salary;
         this.workHours = workHours;
         this.hireYear = hireYear;
-        tax();
         bonus();
         raiseSalary();
+        tax();
     }
 
     public String getName() {
@@ -83,6 +85,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Name: " + getName() + " Salary: " + getSalary()+ "(Bonus: "+this.bonusAmount+",Raise: " +this.raiseAmount + " Work Hours: " + getWorkHours() + " Hire Year: " + getHireYear();
+        return "Name: " + getName() + " Salary: " + getSalary() + "(Bonus: " + new DecimalFormat("##.##").format(this.bonusAmount) + ",Raise: " + new DecimalFormat("##.##").format(this.raiseAmount) + ",Tax: " + new DecimalFormat("##.##").format(this.taxAmount) + ")\nWork Hours: " + getWorkHours() + " Hire Year: " + getHireYear();
     }
 }
